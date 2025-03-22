@@ -1,0 +1,66 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Graphic Bible</title>
+  <link rel="icon" href="images/kitten_films.png" sizes="32x32">
+  <link rel="stylesheet" href="index.css" id="style">
+  <meta name="description" content="Contact us"> 
+  <meta name="author" content="Noah S. Davidson"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="keywords" content="KittenFilms, @KITTENFILMSmeow, Graphic Bible, Illustrated Bible"> 
+</head>
+
+<body style="background-color: gray">
+<div class="center" style="text-align:center">
+	<h1 style="position: fixed; margin-left: 90%; margin-top: 80vh; background-color: wheat; padding: 2%; border-radius: 10px;"><a href="#top" style="text-decoration: none; color: black">Top</a><br></h1>
+	<img src="image/_0.jpg" class="GBI" id="top">
+	<h1>Books:</h1>
+	<h1><a href="#gen" style="text-decoration: none; color: black">Genesis</a><br></h1>
+	<h1><a href="#exo" style="text-decoration: none; color: black">Exodus</a><br></h1>
+	<h1><a href="#lev" style="text-decoration: none; color: black">Leviticus</a><br></h1>
+	<h1><a href="#dut" style="text-decoration: none; color: black">Numbers</a><br></h1>
+	<h1><a href="#num" style="text-decoration: none; color: black">Deuteronomy</a><br></h1>
+	<style>
+		.GBI {
+			width: 80%;
+		}
+		.center {
+			/*margin-left: auto;
+  			margin-right: auto;
+			display: flex;
+			align-items: center;
+  			justify-content: center;*/
+			/*display: block;*/
+  			margin: auto;
+		}
+	</style>
+	<div id="imgs"></div>
+	<script>
+		console.log("run");
+		var start = 4;
+		var end = 43;
+		var di = document.getElementById("imgs");
+		console.log(di)
+		for (let i = start; i <= end; i++) {
+			const el = document.createElement('img');
+			el.src = "pages/pages" + String(i) + ".png";
+			el.classList.add("GBI");
+			if (i === 4) {
+				el.id = "gen"
+			} else if (i === 21) {
+				el.id = "exo"
+			} else if (i === 30) {
+				el.id = "lev"
+			} else if (i === 35) {
+				el.id = "dut"
+			} else if (i === 41) {
+				el.id = "num"
+			}
+			di.appendChild(el);	
+			console.log(i);
+    	}
+  	</script>
+</div>
+</body>
+</html>

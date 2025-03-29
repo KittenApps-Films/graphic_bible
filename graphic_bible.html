@@ -69,12 +69,12 @@
 	<script>
 		console.log("run");
 		var start = 4;
-		var end = 20;
+		var end = 43;
 		var di = document.getElementById("imgs");
 		console.log(di)
 		for (let i = start; i <= end; i++) {
 			const el = document.createElement('img');
-			el.src = "papers/_" + String(i) + ".jpg";
+			el.src = "pages/pages" + String(i) + ".png";
 			el.classList.add("GBI");
 			if (i === 4) {
 				el.id = "gen"
